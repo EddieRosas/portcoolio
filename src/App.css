@@ -5,62 +5,114 @@ body {
 }
 
 .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../public/prism.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px;
   background-size: cover;
-  position: relative;
+  height: 500px;
 }
 
 .intro-content {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #282691;
-  opacity: .9;
+  opacity: .85;
   padding: 8px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: 3px solid white;
   border-radius: 8px;
   color: white;
+}
+
+.who-and-what {
+  user-select: none;
+  text-align: center;
+  align-self: center;
+  width: 250px;
 }
 
 .who-and-what > h1, h3 {
   margin: 0;
 }
 
-.who-and-what {
-  display: inline-block;
-  width: 300px;
+.what-text {
+  width: 400px;
+  padding: 3px;
+  text-align: center;
 }
 
-.what-text {
-  display: inline-block;
-  width: 300px;
+.techs {
+  display: flex;
+  justify-content: center;
+}
+
+.main-techs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: row;
+  align-items: center;
+}
+
+.main-techs > h2 {
+  display: flex;
+  align-content: center;
 }
 
 ul {
-  width: 800px;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding-left: 0;
+}
+
+ul > li {
+  padding-top: 4px;
+  width: 220px;
+  height: auto;
   list-style: none;
-}
-
-ul li {
-  float: left;
-  /* display: inline; */
-}
-
-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-
-#ruby-logo {
-  width: 20px;
+  border-style: 1px solid white;
+  border-radius: 5px;
 }
 
 li > h3 {
-  padding: 2px 16px;
+  padding: 10px 16px;
+}
+
+li > p {
+  margin-top: 0;
+  padding: 0px 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Todo:
+  Figure out how to make all
+  icons a consistent size and
+  line up the text of each "card"
+*/
+
+#ruby-logo {
+  width: 32px;
+}
+
+#rails-logo {
+  width: 40px;
+  background-color: cornsilk;
+}
+
+#javascript-logo {
+  width: 32px;
+}
+
+#react-logo {
+  width: 32px;
+  background-color: black;
+  padding: 4px;
 }
