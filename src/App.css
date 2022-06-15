@@ -4,6 +4,11 @@ body {
   font-family: "Open-Sans", sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .intro {
   display: flex;
   justify-content: center;
@@ -19,7 +24,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   background-color: #282691;
-  opacity: .85;
+  opacity: .9;
   padding: 8px;
   border: 3px solid white;
   border-radius: 8px;
@@ -45,11 +50,12 @@ body {
 
 .techs {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-techs {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   flex-wrap: row;
@@ -61,14 +67,14 @@ body {
   align-content: center;
 }
 
-ul {
+.main-techs > ul {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
   padding-left: 0;
 }
 
-ul > li {
+.main-techs > ul > li {
   padding-top: 4px;
   width: 220px;
   height: auto;
@@ -115,4 +121,18 @@ li > p {
   width: 32px;
   background-color: black;
   padding: 4px;
+}
+
+.contact-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
 }
